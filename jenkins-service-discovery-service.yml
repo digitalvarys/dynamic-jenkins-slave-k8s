@@ -8,6 +8,6 @@ spec:
     app: master
   ports:
     - protocol: TCP
-      port: 50000
-      targetPort: 50000
+      port: 3838
+      targetPort: 3838
       name: slaves

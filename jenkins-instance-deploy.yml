@@ -15,9 +15,9 @@ spec:
           name: jenkins
           ports:
             - containerPort: 8080
-              name: http-port
-            - containerPort: 50000
-              name: jnlp-port
+              name: jenkins-port
+            - containerPort: 3838
+              name: jenkins-sd-port
           env:
             - name: JAVA_OPTS
               value: -Djenkins.install.runSetupWizard=false
