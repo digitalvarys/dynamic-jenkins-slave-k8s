@@ -1,8 +1,8 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: jenkins-instance
-  namespace: jenkins-instance
+  name: jenkins-slave
+  namespace: jenkins-slave
 spec:
   replicas: 1
   template:
@@ -12,7 +12,7 @@ spec:
     spec:
       containers:
         - image: digitalvarys/jenkins
-          name: jenkins
+          name: jenkins-instance
           ports:
             - containerPort: 8080
               name: jenkins-port
